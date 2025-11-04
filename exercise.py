@@ -22,6 +22,7 @@ with st.form(key="cheryl_form", enter_to_submit=False, border=True, width= "stre
 
     data = {"name": name, "age": age, "address": address}
 
+if st.session_state.submitted:
     progress_message = "Submitting Data. Please wait."
     progress_bar = st.progress(0, text=progress_message)
     for percent_complete in range(100):
